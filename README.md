@@ -1,6 +1,6 @@
 # awscli-helper
 
-Scripts and How to to enhence the use of AWS CLI
+Scripts and How to to enhance the use of AWS CLI
 
 ## Why this tool?
 
