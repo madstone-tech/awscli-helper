@@ -36,6 +36,7 @@ the issue is now getting a list your running instances
    alias aws-ec2-list="/opt/scripts/aws-ec2-list.sh"
    alias aws-ssm-list="/opt/scripts/aws-ssm-list.sh"
    alias aws-ssm-connect="/opt/scripts/aws-ssm-connect.sh"
+   alias aws-workspace-list="/opt/scripts/aws-workspace-list.sh"
    ```
 5. Reload the Bachrc file
    - `source ~/.bashrc`
@@ -64,7 +65,7 @@ from a terminal window is you type
 
 ### aws-ssm-list
 
-from a terminal window is you type
+from a terminal window if you type
 `aws-ssm-list` it will output in a table formated text the list of the instances in your AWS account registed with AWS Session-Manager
 
 ```
@@ -86,16 +87,38 @@ from a terminal window is you type
 
 - `aws-ssm-connect i-0195c445788975y63` will connect to InstanceID `i-0195c445788975y63` assuming the default profile
 
+### aws-workspace-list
+
+from a terminal window if you type
+`aws-workspace-list` it will output the list of the workspaces in your account in your region formated in a table
+
+```
+---------------------------------------------
+|            DescribeWorkspaces             |
++-----------+--------------+----------------+
+|   State   |  UserName    |  WorspaceId    |
++-----------+--------------+----------------+
+|  AVAILABLE|  user1       |  ws-5ri7v3p9b  |
+|  AVAILABLE|  user2       |  ws-yxff10dfy  |
+|  STOPPED  |  user3       |  ws-hj7gg4lm8  |
++-----------+--------------+----------------+
+```
+
 ## Repo File Structure
 
 ```
 
+.
 ├── LICENSE
 ├── README.md
 └── scripts
     ├── aws-ec2-list.sh
     ├── aws-ssm-connect.sh
-    └── aws-ssm-list.sh
+    ├── aws-ssm-list.sh
+    └── aws-workspace-list.sh
+
+1 directory, 6 files
+
 
 ```
 
